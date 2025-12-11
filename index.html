@@ -28,6 +28,7 @@
               'spin-slow': 'spin 12s linear infinite',
               'marquee': 'marquee 25s linear infinite',
               'glitch': 'glitch 1s linear infinite',
+              'shimmer': 'shimmer 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
             },
             keyframes: {
               marquee: {
@@ -38,6 +39,10 @@
                 '2%, 64%': { transform: 'translate(2px,0) skew(0deg)' },
                 '4%, 60%': { transform: 'translate(-2px,0) skew(0deg)' },
                 '62%': { transform: 'translate(0,0) skew(5deg)' },
+              },
+              shimmer: {
+                '0%': { transform: 'translateX(-100%)' },
+                '100%': { transform: 'translateX(100%)' }
               }
             }
           },

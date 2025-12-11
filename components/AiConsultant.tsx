@@ -4,15 +4,42 @@ import { sendMessageToGemini } from '../services/geminiService';
 import { Send, Terminal } from 'lucide-react';
 
 const MessageSkeleton: React.FC = () => (
-  <div className="flex justify-start animate-pulse w-full">
-    <div className="max-w-xl p-4 w-full border border-acid/20 bg-acid/5">
-       <span className="opacity-50 text-[10px] block mb-3 uppercase tracking-wider text-acid">
-           [SYSTEM]: PROCESSING_DATA_STREAM...
-       </span>
-       <div className="space-y-2">
-           <div className="h-3 bg-acid/20 w-full"></div>
-           <div className="h-3 bg-acid/20 w-3/4"></div>
-           <div className="h-3 bg-acid/20 w-5/6"></div>
+  <div className="flex justify-start w-full animate-in fade-in duration-300">
+    <div className="max-w-xl p-6 w-full border border-acid/20 bg-acid/5 relative overflow-hidden group">
+       
+       {/* Tech decorative corners */}
+       <div className="absolute top-0 left-0 w-2 h-2 border-l-2 border-t-2 border-acid/50"></div>
+       <div className="absolute top-0 right-0 w-2 h-2 border-r-2 border-t-2 border-acid/50"></div>
+       <div className="absolute bottom-0 left-0 w-2 h-2 border-l-2 border-b-2 border-acid/50"></div>
+       <div className="absolute bottom-0 right-0 w-2 h-2 border-r-2 border-b-2 border-acid/50"></div>
+
+       {/* Header Status */}
+       <div className="flex items-center gap-3 mb-4 border-b border-acid/10 pb-2">
+           <div className="relative">
+               <div className="w-2 h-2 bg-acid rounded-full animate-pulse"></div>
+               <div className="absolute inset-0 bg-acid rounded-full animate-ping opacity-20"></div>
+           </div>
+           <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-acid/80 animate-pulse">
+               [SYSTEM]: PROCESSING_DATA_STREAM
+           </span>
+       </div>
+       
+       {/* Scanning Lines */}
+       <div className="space-y-3">
+           <div className="h-2 bg-acid/10 w-full rounded-sm overflow-hidden relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-acid/20 to-transparent animate-shimmer w-full"></div>
+           </div>
+           <div className="h-2 bg-acid/10 w-3/4 rounded-sm overflow-hidden relative delay-75">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-acid/20 to-transparent animate-shimmer w-full"></div>
+           </div>
+           <div className="h-2 bg-acid/10 w-5/6 rounded-sm overflow-hidden relative delay-150">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-acid/20 to-transparent animate-shimmer w-full"></div>
+           </div>
+       </div>
+
+       {/* Scrolling Hex Data Footer */}
+       <div className="mt-4 pt-2 border-t border-acid/5 font-mono text-[8px] text-acid/40 leading-tight h-5 overflow-hidden whitespace-nowrap opacity-60">
+           0x4F 0x9A 0x1B 0xCD ... DECRYPTING ... 0x00 0xFF 0xA1 ... HANDSHAKE_ACK
        </div>
     </div>
   </div>

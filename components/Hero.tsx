@@ -29,20 +29,20 @@ export const Hero: React.FC = () => {
         {/* Massive Headline */}
         <div className="flex flex-col">
             <Reveal width="100%">
-                <h1 className="text-[12vw] leading-[0.8] font-display font-bold tracking-tighter text-white uppercase mix-blend-difference">
+                <h1 className="text-[12vw] leading-[0.8] font-display font-bold tracking-tighter text-white uppercase mix-blend-difference drop-shadow-[0_0_25px_rgba(0,71,255,0.4)]">
                     Creative
                 </h1>
             </Reveal>
             <Reveal width="100%" delay={0.1}>
                  <div className="flex items-center gap-4 md:gap-12">
-                     <div className="h-[2px] w-12 md:w-32 bg-acid"></div>
-                     <h1 className="text-[12vw] leading-[0.8] font-display font-bold tracking-tighter text-white uppercase text-outline">
+                     <div className="h-[2px] w-12 md:w-32 bg-acid shadow-[0_0_15px_rgba(0,71,255,0.8)]"></div>
+                     <h1 className="text-[12vw] leading-[0.8] font-display font-bold tracking-tighter text-white uppercase text-outline drop-shadow-[0_0_25px_rgba(0,71,255,0.4)]">
                         Intel
                      </h1>
                  </div>
             </Reveal>
             <Reveal width="100%" delay={0.2}>
-                <h1 className="text-[12vw] leading-[0.8] font-display font-bold tracking-tighter text-white uppercase text-right">
+                <h1 className="text-[12vw] leading-[0.8] font-display font-bold tracking-tighter text-white uppercase text-right drop-shadow-[0_0_25px_rgba(0,71,255,0.4)]">
                     ligence
                 </h1>
             </Reveal>
@@ -57,10 +57,10 @@ export const Hero: React.FC = () => {
              </div>
 
              <div className="flex gap-0">
-                 <button className="h-16 px-10 bg-acid text-white font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-500 ease-in-out hover:animate-glitch">
+                 <button className="relative h-16 px-10 bg-acid text-white font-bold uppercase tracking-widest border border-white/20 shadow-[0_0_20px_rgba(0,71,255,0.5)] hover:bg-white hover:text-black hover:shadow-[0_0_40px_rgba(255,255,255,0.5)] transition-all duration-500 ease-in-out hover:animate-glitch z-10">
                     Start Project
                  </button>
-                 <div className="h-16 w-16 border border-white/20 flex items-center justify-center text-white hover:bg-white/10 transition-colors cursor-pointer">
+                 <div className="h-16 w-16 border-y border-r border-white/40 bg-black/60 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 cursor-pointer z-10">
                     <ArrowDown className="animate-bounce" />
                  </div>
              </div>
